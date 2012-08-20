@@ -1,0 +1,45 @@
+<%= form_for(@grain) do |f| %>
+  <% if @grain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@grain.errors.count, "error") %> prohibited this grain from being saved:</h2>
+
+      <ul>
+      <% @grain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :lovibond_lo %><br />
+    <%= f.text_field :lovibond_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :lovibond_hi %><br />
+    <%= f.text_field :lovibond_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :gu_lo %><br />
+    <%= f.text_field :gu_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :gu_hi %><br />
+    <%= f.text_field :gu_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :characteristics %><br />
+    <%= f.text_area :characteristics %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
