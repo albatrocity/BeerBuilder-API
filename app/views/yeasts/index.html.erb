@@ -1,0 +1,35 @@
+<h1>Listing yeasts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Attenuation lo</th>
+    <th>Attenuation hi</th>
+    <th>Flocculation</th>
+    <th>Temperature lo</th>
+    <th>Temperature hi</th>
+    <th>Alcohol tolerance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @yeasts.each do |yeast| %>
+  <tr>
+    <td><%= yeast.name %></td>
+    <td><%= yeast.attenuation_lo %></td>
+    <td><%= yeast.attenuation_hi %></td>
+    <td><%= yeast.flocculation %></td>
+    <td><%= yeast.temperature_lo %></td>
+    <td><%= yeast.temperature_hi %></td>
+    <td><%= yeast.alcohol_tolerance %></td>
+    <td><%= link_to 'Show', yeast %></td>
+    <td><%= link_to 'Edit', edit_yeast_path(yeast) %></td>
+    <td><%= link_to 'Destroy', yeast, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Yeast', new_yeast_path %>

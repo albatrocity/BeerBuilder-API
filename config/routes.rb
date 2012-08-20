@@ -1,4 +1,8 @@
 BeerBuilder::Application.routes.draw do
+  resources :yeasts
+
+  resources :hops
+
   resources :grains
 
   # The priority is based upon order of creation:

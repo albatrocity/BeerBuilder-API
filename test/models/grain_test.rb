@@ -2,8 +2,8 @@ require "minitest_helper"
 include Mongoid::Matchers
 
 describe Grain do
-  it "includes name in to_param" do
+  it "has a name" do
     grain = FactoryGirl.build(:grain)
-    grain.name.must_equal "#{grain.name}"
+    grain.must have_field(:name)
   end
 end

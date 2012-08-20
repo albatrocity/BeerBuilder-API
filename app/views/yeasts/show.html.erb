@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @yeast.name %>
+</p>
+
+<p>
+  <b>Attenuation lo:</b>
+  <%= @yeast.attenuation_lo %>
+</p>
+
+<p>
+  <b>Attenuation hi:</b>
+  <%= @yeast.attenuation_hi %>
+</p>
+
+<p>
+  <b>Flocculation:</b>
+  <%= @yeast.flocculation %>
+</p>
+
+<p>
+  <b>Temperature lo:</b>
+  <%= @yeast.temperature_lo %>
+</p>
+
+<p>
+  <b>Temperature hi:</b>
+  <%= @yeast.temperature_hi %>
+</p>
+
+<p>
+  <b>Alcohol tolerance:</b>
+  <%= @yeast.alcohol_tolerance %>
+</p>
+
+
+<%= link_to 'Edit', edit_yeast_path(@yeast) %> |
+<%= link_to 'Back', yeasts_path %>

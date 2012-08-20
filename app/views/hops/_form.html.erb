@@ -1,0 +1,37 @@
+<%= form_for(@hop) do |f| %>
+  <% if @hop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hop.errors.count, "error") %> prohibited this hop from being saved:</h2>
+
+      <ul>
+      <% @hop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :aa_lo %><br />
+    <%= f.text_field :aa_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :aa_hi %><br />
+    <%= f.text_field :aa_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :characteristics %><br />
+    <%= f.text_area :characteristics %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
