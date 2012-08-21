@@ -1,4 +1,8 @@
 BeerBuilder::Application.routes.draw do
+  mount RailsAdmin::Engine => '/superadmin', :as => 'rails_admin'
+
+  devise_for :admins
+
   resources :beer_categories
 
   resources :beer_styles
@@ -10,6 +14,8 @@ BeerBuilder::Application.routes.draw do
   resources :hops
 
   resources :grains
+
+  root :to => "beer_categories#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

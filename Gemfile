@@ -6,6 +6,7 @@ gem 'rails', '3.1.3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mongoid', '~> 3.0.2'
+gem 'rails_admin'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,3 +38,5 @@ group :test, :development do
   gem "mongoid-minitest"
   gem 'factory_girl_rails'
 end
+
+gem "devise"
