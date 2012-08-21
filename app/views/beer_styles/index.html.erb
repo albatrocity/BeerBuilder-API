@@ -1,0 +1,57 @@
+<h1>Listing beer_styles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Og hi</th>
+    <th>Og lo</th>
+    <th>Fg lo</th>
+    <th>Fg hi</th>
+    <th>Abv lo</th>
+    <th>Abv hi</th>
+    <th>Ibu lo</th>
+    <th>Ibu hi</th>
+    <th>Srm lo</th>
+    <th>Srm hi</th>
+    <th>Aroma</th>
+    <th>Appearance</th>
+    <th>Flavor</th>
+    <th>Mouthfeel</th>
+    <th>Overall impression</th>
+    <th>Comments</th>
+    <th>History</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @beer_styles.each do |beer_style| %>
+  <tr>
+    <td><%= beer_style.name %></td>
+    <td><%= beer_style.og_hi %></td>
+    <td><%= beer_style.og_lo %></td>
+    <td><%= beer_style.fg_lo %></td>
+    <td><%= beer_style.fg_hi %></td>
+    <td><%= beer_style.abv_lo %></td>
+    <td><%= beer_style.abv_hi %></td>
+    <td><%= beer_style.ibu_lo %></td>
+    <td><%= beer_style.ibu_hi %></td>
+    <td><%= beer_style.srm_lo %></td>
+    <td><%= beer_style.srm_hi %></td>
+    <td><%= beer_style.aroma %></td>
+    <td><%= beer_style.appearance %></td>
+    <td><%= beer_style.flavor %></td>
+    <td><%= beer_style.mouthfeel %></td>
+    <td><%= beer_style.overall_impression %></td>
+    <td><%= beer_style.comments %></td>
+    <td><%= beer_style.history %></td>
+    <td><%= link_to 'Show', beer_style %></td>
+    <td><%= link_to 'Edit', edit_beer_style_path(beer_style) %></td>
+    <td><%= link_to 'Destroy', beer_style, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Beer style', new_beer_style_path %>

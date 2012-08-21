@@ -1,0 +1,89 @@
+<%= form_for(@beer_style) do |f| %>
+  <% if @beer_style.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@beer_style.errors.count, "error") %> prohibited this beer_style from being saved:</h2>
+
+      <ul>
+      <% @beer_style.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :og_hi %><br />
+    <%= f.text_field :og_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :og_lo %><br />
+    <%= f.text_field :og_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :fg_lo %><br />
+    <%= f.text_field :fg_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :fg_hi %><br />
+    <%= f.text_field :fg_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :abv_lo %><br />
+    <%= f.text_field :abv_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :abv_hi %><br />
+    <%= f.text_field :abv_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :ibu_lo %><br />
+    <%= f.text_field :ibu_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :ibu_hi %><br />
+    <%= f.text_field :ibu_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :srm_lo %><br />
+    <%= f.text_field :srm_lo %>
+  </div>
+  <div class="field">
+    <%= f.label :srm_hi %><br />
+    <%= f.text_field :srm_hi %>
+  </div>
+  <div class="field">
+    <%= f.label :aroma %><br />
+    <%= f.text_area :aroma %>
+  </div>
+  <div class="field">
+    <%= f.label :appearance %><br />
+    <%= f.text_area :appearance %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor %><br />
+    <%= f.text_area :flavor %>
+  </div>
+  <div class="field">
+    <%= f.label :mouthfeel %><br />
+    <%= f.text_area :mouthfeel %>
+  </div>
+  <div class="field">
+    <%= f.label :overall_impression %><br />
+    <%= f.text_area :overall_impression %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :history %><br />
+    <%= f.text_area :history %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

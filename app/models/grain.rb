@@ -8,5 +8,6 @@ class Grain
   field :characteristics, type: String
   field :description, type: String
 
-  validates :name, uniqueness:true, presence:true
+  validates :name, presence:true
+  has_and_belongs_to_many :prototypes, :inverse_of => :grain
 end

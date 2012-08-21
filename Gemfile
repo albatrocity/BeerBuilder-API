@@ -33,6 +33,7 @@ group :test, :development do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
   gem 'minitest'
+  gem 'capybara'
   gem "mongoid-minitest"
   gem 'factory_girl_rails'
 end

@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @beer_category.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_beer_category_path(@beer_category) %> |
+<%= link_to 'Back', beer_categories_path %>

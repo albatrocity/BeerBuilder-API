@@ -1,0 +1,100 @@
+me.update_attributes(:is_broker => true)
+me.save
+Admin
+Admin.first
+Account.last
+Account.last.is_admin
+Account.find_by_email('ross@cremalab.com')
+Account.find_by_email('ross@cremalab.com').update_attributes(:is_admin => true)
+Account.find_by_email('ross@cremalab.com').save
+Hop
+Hop.new(name: "Cascade", aa_lo: "4.5", aa_hi: "6.0", characteristics: "Hoppy")
+hop = Hop.new(name: "Cascade", aa_lo: "4.5", aa_hi: "6.0", characteristics: "Hoppy")
+hop.save
+Hop.first
+pro = Prototype.new()
+pro.save
+pro.hop_ids = [hop.id]
+pro.hop_ids = [5033a4b23026a39975000001]
+pro.hop_ids = ['5033a4b23026a39975000001']
+Hop.find(5033a4c33026a39975000002)
+Hop.find('5033a4c33026a39975000002')
+pro.hop_id = ['5033a4c33026a39975000002']
+pro.hop_id = 5033a4c33026a39975000002
+pro.hop_ids = ['5033a4c33026a39975000002']
+pro.hop_ids = ['1']
+pro.hop_ids = [1]
+pro
+pro.hops.add '5033a4c33026a39975000002'
+pro.hops
+pro2 = Prototype.new()
+pro2.hop_ids << 1
+pro2.hop_ids << 5033a4c33026a39975000002
+pro2.hop_ids << '5033a4c33026a39975000002'
+pro2.save
+pro2.hop_ids
+pro2.hops
+pro2
+pro2.destroy.save
+pro2.destroy
+pro3 = Prototype.new()
+pro3.save
+pro3
+pro3.add_hops
+pro3.add_hop
+pro3.hops
+pro3.hops << hop
+pro4 = Prototype.new
+pro4.save
+pro4.hops
+pro4.hops << hop
+ exit
+pro5 = Prototype.new
+proto = Prototype.newexit
+hop = Hop.first
+Prototype.first
+hop.prototypes
+hop
+proto = Prototype.new
+hop2 = Hop.create
+hop2.prototype
+proto2.hops << hop2
+hop2
+hop2.prototypes
+hop2.prototype_ids
+hop = Hop.create
+proto.hops << hop
+ho2p = Hop.create
+proto.hops << hop2
+proto.hops << ho2p
+proto2 = Prototype.create
+proto2.hops << ho2p
+ho2p.prototypes
+ho2p
+g = grain.create
+g = Grain.create
+proto.grains
+proto.hops
+proto.grain
+FactoryGirl.create(:prototype)
+FactoryGirl.create(:prototype_with_hops)
+BeerStyle
+proto = Prototype.create
+proto.beer_style_id = 5033c1303026a30c85000001
+proto.beer_style_id = '5033c1303026a30c85000001'
+proto
+style.prototypes << proto
+style.prototypes
+proto.beer_style
+cat << style
+style.category
+style.beer_category
+style
+cat
+style = BeerStyle.last
+cat = BeerCategory.create
+style = BeerStyle.create
+style.beer_category = cat
+cat.beer_styles
+cat.beer_styles << style
+exit

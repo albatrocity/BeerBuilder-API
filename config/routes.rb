@@ -1,4 +1,10 @@
 BeerBuilder::Application.routes.draw do
+  resources :beer_categories
+
+  resources :beer_styles
+
+  resources :prototypes
+
   resources :yeasts
 
   resources :hops
