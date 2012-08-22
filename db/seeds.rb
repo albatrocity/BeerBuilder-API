@@ -26,6 +26,6 @@ CSV.foreach(hops, :col_sep =>',', :row_sep =>:auto, :quote_char => '"') do |row|
   Hop.create!(:name => row[0], :description => row[1], :characteristics => row[2], :aa_hi => row[3], :aa_lo => row[4])
 end
 
-CSV.foreach(grains, :col_sep =>',', :row_sep =>:auto, :quote_char => '"') do |row|
+CSV.foreach(beer_styles, :col_sep =>',', :row_sep =>:auto, :quote_char => '"') do |row|
   BeerStyle.create!(:name => row[0], :abv_hi => row[1], :abv_lo => row[2], :fg_hi => row[3], :fg_lo => row[4], :ibu_hi => row[5], :ibu_lo => row[6], :og_hi => row[7], :og_lo => row[8], :srm_hi => row[9], :srm_hi => row[10])
 end
