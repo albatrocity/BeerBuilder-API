@@ -10,4 +10,5 @@ class Grain
   field :is_extract, type: Boolean
 
   validates :name, presence:true
+  has_many :tags
 end

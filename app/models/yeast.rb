@@ -8,5 +8,7 @@ class Yeast
   field :temperature_hi, type: BigDecimal
   field :alcohol_tolerance, type: BigDecimal
 
-  has_and_belongs_to_many :prototypes, :inverse_of => :yeast
+  validates :name, presence:true
+
+  has_many :tags
 end

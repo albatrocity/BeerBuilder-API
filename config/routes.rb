@@ -1,4 +1,6 @@
 BeerBuilder::Application.routes.draw do
+  resources :tags
+
   mount RailsAdmin::Engine => '/superadmin', :as => 'rails_admin'
 
   devise_for :admins
