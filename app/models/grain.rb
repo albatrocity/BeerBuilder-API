@@ -7,6 +7,7 @@ class Grain
   field :gu_hi, type: BigDecimal
   field :characteristics, type: String
   field :description, type: String
+  field :is_extract, type: Boolean
 
   validates :name, presence:true
   has_and_belongs_to_many :prototypes, :inverse_of => :grain
