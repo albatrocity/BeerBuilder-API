@@ -19,8 +19,9 @@ class BeerStyle
   field :comments, type: String
   field :history, type: String
 
-  has_many :prototypes
   belongs_to :beer_category
+  has_many :prototypes
+  accepts_nested_attributes_for :prototypes
 
   validates :name, presence:true
 end

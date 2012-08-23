@@ -1,0 +1,23 @@
+<h1>Listing ingredient_grains</h1>
+
+<table>
+  <tr>
+    <th>Weight</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ingredient_grains.each do |ingredient_grain| %>
+  <tr>
+    <td><%= ingredient_grain.weight %></td>
+    <td><%= link_to 'Show', ingredient_grain %></td>
+    <td><%= link_to 'Edit', edit_ingredient_grain_path(ingredient_grain) %></td>
+    <td><%= link_to 'Destroy', ingredient_grain, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ingredient grain', new_ingredient_grain_path %>

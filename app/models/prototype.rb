@@ -1,10 +1,14 @@
 class Prototype
   include Mongoid::Document
   field :id, type: String
-  has_and_belongs_to_many :hops, :inverse_of => :prototype
-  has_and_belongs_to_many :grains, :inverse_of => :prototype
-  has_and_belongs_to_many :yeasts, :inverse_of => :prototype
+  embeds_many :ingredient_grains
+  embeds_many :ingredient_hops
+  embeds_many :ingredient_yeasts
 
-  belongs_to :beer_style
+  belongs_to :beer_style, :inverse_of => :prototype
+  belongs_to :beer_category, :inverse_of => :prototype
+  accepts_nested_attributes_for :ingredient_grains
+  accepts_nested_attributes_for :ingredient_hops
+  accepts_nested_attributes_for :ingredient_yeasts
   
 end

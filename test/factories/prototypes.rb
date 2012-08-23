@@ -18,9 +18,9 @@ FactoryGirl.define do
       # attributes; `create_list`'s second argument is the number of records
       # to create and we make sure the user is associated properly to the post
       after(:create) do |prototype, evaluator|
-        FactoryGirl.create_list(:hop, evaluator.hops_count)
-        FactoryGirl.create_list(:grain, evaluator.grains_count)
-        FactoryGirl.create_list(:yeast, evaluator.yeasts_count)
+        FactoryGirl.create_list(:ingredient_hop, evaluator.hops_count, :prototype => prototype, :hop => Hop.first)
+        FactoryGirl.create_list(:ingredient_grain, evaluator.grains_count, :prototype => prototype, :grain => Grain.first)
+        FactoryGirl.create_list(:ingredient_yeast, evaluator.yeasts_count, :prototype => prototype, :yeast => Yeast.first)
       end
     end
   end

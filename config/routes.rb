@@ -1,4 +1,10 @@
 BeerBuilder::Application.routes.draw do
+  resources :ingredient_yeasts
+
+  resources :ingredient_grains
+
+  resources :ingredient_hops
+
   resources :tags
 
   mount RailsAdmin::Engine => '/superadmin', :as => 'rails_admin'
