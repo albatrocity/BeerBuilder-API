@@ -37,7 +37,7 @@ group :test, :development do
   gem 'minitest'
   gem 'capybara'
   gem "mongoid-minitest"
-  gem 'factory_girl_rails'
+  gem 'fabrication'
 end
 
 gem "devise"

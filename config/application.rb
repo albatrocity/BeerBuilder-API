@@ -52,5 +52,10 @@ module BeerBuilder
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+
+    config.generators do |g|
+      g.test_framework      :test_unit, fixture_replacement: :fabrication
+      g.fixture_replacement :fabrication, dir: "test/fabricators"
+    end
   end
 end
