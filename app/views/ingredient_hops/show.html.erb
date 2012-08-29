@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Weight:</b>
+  <%= @ingredient_hop.weight %>
+</p>
+
+<p>
+  <b>Boil time:</b>
+  <%= @ingredient_hop.boil_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_ingredient_hop_path(@ingredient_hop) %> |
+<%= link_to 'Back', ingredient_hops_path %>

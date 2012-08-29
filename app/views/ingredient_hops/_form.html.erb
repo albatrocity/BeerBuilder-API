@@ -1,0 +1,25 @@
+<%= form_for(@ingredient_hop) do |f| %>
+  <% if @ingredient_hop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ingredient_hop.errors.count, "error") %> prohibited this ingredient_hop from being saved:</h2>
+
+      <ul>
+      <% @ingredient_hop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :boil_time %><br />
+    <%= f.number_field :boil_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

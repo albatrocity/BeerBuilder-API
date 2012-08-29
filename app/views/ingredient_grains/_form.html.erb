@@ -1,0 +1,21 @@
+<%= form_for(@ingredient_grain) do |f| %>
+  <% if @ingredient_grain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ingredient_grain.errors.count, "error") %> prohibited this ingredient_grain from being saved:</h2>
+
+      <ul>
+      <% @ingredient_grain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

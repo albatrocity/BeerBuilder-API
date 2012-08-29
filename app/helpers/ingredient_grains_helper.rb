@@ -1,0 +1,2 @@
+module IngredientGrainsHelper
+end
