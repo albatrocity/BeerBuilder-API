@@ -34,7 +34,7 @@ GEM
     bbenezech-nested_form (0.0.6)
     bcrypt-ruby (3.0.1)
     blankslate (2.1.2.4)
-    bootstrap-sass (2.0.4.0)
+    bootstrap-sass (2.0.4.1)
     builder (3.0.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -43,6 +43,9 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+    capybara_minitest_spec (0.2.2)
+      capybara
+      minitest (>= 2.0)
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
     coffee-rails (3.2.2)
@@ -89,21 +92,21 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     minitest (3.3.0)
-    minitest-matchers (1.2.0)
-      minitest (>= 2.5.0)
-    mongoid (3.0.4)
+    minitest-rails (0.1.3)
+      minitest (~> 3.0)
+      rails (~> 3.0)
+    mongoid (3.0.5)
       activemodel (~> 3.1)
       moped (~> 1.1)
       origin (~> 1.0)
       tzinfo (~> 0.3.22)
-    mongoid-minitest (0.1.2)
+    mongoid-minitest (0.1.1)
       minitest (~> 3.3.0)
-      minitest-matchers (~> 1.2.0)
-      mongoid (~> 3.0.4)
-    moped (1.2.0)
+      mongoid (~> 3.0.2)
+    moped (1.2.1)
     multi_json (1.3.6)
     nokogiri (1.5.5)
-    origin (1.0.6)
+    origin (1.0.7)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -183,13 +186,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
+  capybara_minitest_spec
   coffee-rails (~> 3.2.1)
   devise
   fabrication
   jbuilder
   jquery-rails
-  minitest
+  minitest-rails
   mongoid (~> 3.0.2)
   mongoid-minitest
   rails (= 3.2.0)

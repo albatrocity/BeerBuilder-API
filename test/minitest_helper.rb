@@ -1,7 +1,10 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "minitest/autorun"
+require "minitest/pride"
+require "minitest/rails"
 require "capybara/rails"
+
 
 class IntegrationTest < MiniTest::Spec
   include Rails.application.routes.url_helpers

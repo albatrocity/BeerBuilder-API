@@ -34,8 +34,8 @@ gem 'jquery-rails'
 group :test, :development do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
-  gem 'minitest'
-  gem 'capybara'
+  gem 'minitest-rails'
+  gem 'capybara_minitest_spec'
   gem "mongoid-minitest"
   gem 'fabrication'
 end
