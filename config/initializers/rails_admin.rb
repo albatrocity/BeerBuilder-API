@@ -94,38 +94,38 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
-  # config.model BeerStyle do
-  #   # Found associations:
-  #     configure :beer_category, :belongs_to_association 
-  #     configure :prototypes, :has_many_association   #   # Found columns:
-  #     configure :_type, :text         # Hidden 
-  #     configure :_id, :bson_object_id 
-  #     configure :name, :string 
-  #     configure :og_hi, :decimal 
-  #     configure :og_lo, :decimal 
-  #     configure :fg_lo, :decimal 
-  #     configure :fg_hi, :decimal 
-  #     configure :abv_lo, :decimal 
-  #     configure :abv_hi, :decimal 
-  #     configure :ibu_lo, :decimal 
-  #     configure :ibu_hi, :decimal 
-  #     configure :srm_lo, :decimal 
-  #     configure :srm_hi, :decimal 
-  #     configure :aroma, :text 
-  #     configure :appearance, :text 
-  #     configure :flavor, :text 
-  #     configure :mouthfeel, :text 
-  #     configure :overall_impression, :text 
-  #     configure :comments, :text 
-  #     configure :history, :text 
-  #     configure :beer_category_id, :bson_object_id         # Hidden   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
+  config.model BeerStyle do
+    # Found associations:
+      configure :beer_category, :belongs_to_association 
+      configure :prototypes, :has_many_association   #   # Found columns:
+      configure :_type, :text         # Hidden 
+      configure :_id, :bson_object_id 
+      configure :name, :string 
+      configure :og_hi, :decimal 
+      configure :og_lo, :decimal 
+      configure :fg_lo, :decimal 
+      configure :fg_hi, :decimal 
+      configure :abv_lo, :decimal 
+      configure :abv_hi, :decimal 
+      configure :ibu_lo, :decimal 
+      configure :ibu_hi, :decimal 
+      configure :srm_lo, :decimal 
+      configure :srm_hi, :decimal 
+      configure :aroma, :text 
+      configure :appearance, :text 
+      configure :flavor, :text 
+      configure :mouthfeel, :text 
+      configure :overall_impression, :text 
+      configure :comments, :text 
+      configure :history, :text 
+      configure :beer_category_id, :bson_object_id         # Hidden   #   # Sections:
+    list do; end
+    export do; end
+    show do; end
+    edit do; end
+    create do; end
+    update do; end
+  end
   # config.model Grain do
   #   # Found associations:
   #     configure :prototypes, :has_and_belongs_to_many_association   #   # Found columns:
