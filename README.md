@@ -66,3 +66,31 @@ Prototypes belong to a beer style. Each style has a single prototype.
 * temperature_hi
 * alcohol_tolerance
 * adjectives
+
+## Sample API Response
+
+#### GET `/api/prototypes`
+
+    {
+      [{
+          "style" : {
+              "name"  : "...",
+              "attrs" : []
+          },
+          "grains" : [
+              {
+                  "id"        : "51f65ads4f6sad4f"
+                  "name"      : "sumthin",
+                  "weight"    : 5
+              }
+          ],
+          "hops" : [
+              {
+                  "id"        : "51f65ads4f6sad4f"
+                  "name"      : "sumthin",
+                  "weight"    : 5
+                  "boil_time" : 45
+              }
+          ]
+      }]
+    }

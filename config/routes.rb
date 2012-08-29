@@ -1,4 +1,21 @@
+require 'api_constraints'
+
 BeerBuilder::Application.routes.draw do
+  namespace :api, defaults: {format: 'json'} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+      resources :ingredient_yeasts, :only => [:index, :show]
+      resources :ingredient_grains, :only => [:index, :show]
+      resources :ingredient_hops, :only => [:index, :show]
+      resources :tags, :only => [:index, :show]
+      resources :beer_categories, :only => [:index, :show]
+      resources :beer_styles, :only => [:index, :show]
+      resources :prototypes, :only => [:index, :show]
+      resources :yeasts, :only => [:index, :show]
+      resources :hops, :only => [:index, :show]
+      resources :grains, :only => [:index, :show]    
+    end
+  end
+
   resources :ingredient_yeasts
 
   resources :ingredient_grains

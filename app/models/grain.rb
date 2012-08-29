@@ -1,5 +1,7 @@
 class Grain
   include Mongoid::Document
+  include Mongoid::Timestamps::Updated
+  
   field :name, type: String
   field :lovibond_lo, type: BigDecimal
   field :lovibond_hi, type: BigDecimal

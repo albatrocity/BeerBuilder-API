@@ -1,5 +1,6 @@
 class Yeast
   include Mongoid::Document
+  include Mongoid::Timestamps::Updated
   field :name, type: String
   field :attenuation_lo, type: BigDecimal
   field :attenuation_hi, type: BigDecimal

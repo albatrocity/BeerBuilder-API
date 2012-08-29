@@ -1,5 +1,6 @@
 class Prototype
   include Mongoid::Document
+  include Mongoid::Timestamps::Updated
   field :id, type: String
   embeds_many :ingredient_grains
   embeds_many :ingredient_hops
