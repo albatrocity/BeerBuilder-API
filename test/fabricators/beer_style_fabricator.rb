@@ -1,4 +1,5 @@
 Fabricator(:beer_style) do
+  beer_category { Fabricate(:beer_category) }
   name "Doppelbock"
   og_hi ""
   og_lo ""

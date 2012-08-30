@@ -1,7 +1,7 @@
 class Prototype
   include Mongoid::Document
   include Mongoid::Timestamps::Updated
-  field :id, type: String
+  field :id
   embeds_many :ingredient_grains
   embeds_many :ingredient_hops
   embeds_many :ingredient_yeasts
@@ -12,4 +12,11 @@ class Prototype
   accepts_nested_attributes_for :ingredient_hops
   accepts_nested_attributes_for :ingredient_yeasts
   
+  before_save do |proto|
+    self.write_attributes(beer_category: self.beer_style.beer_category)
+  end
+
+  validates_presence_of :beer_style
+  validates_presence_of :beer_category
+
 end

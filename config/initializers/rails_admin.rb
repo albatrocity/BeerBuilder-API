@@ -164,26 +164,34 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
-  # config.model Prototype do
-  #   # Found associations:
-  #     configure :hops, :has_and_belongs_to_many_association 
-  #     configure :grains, :has_and_belongs_to_many_association 
-  #     configure :yeasts, :has_and_belongs_to_many_association 
-  #     configure :beer_style, :belongs_to_association   #   # Found columns:
-  #     configure :_type, :text         # Hidden 
-  #     configure :_id, :bson_object_id 
-  #     configure :id, :text 
-  #     configure :hop_ids, :serialized         # Hidden 
-  #     configure :grain_ids, :serialized         # Hidden 
-  #     configure :yeast_ids, :serialized         # Hidden 
-  #     configure :beer_style_id, :bson_object_id         # Hidden   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
+  config.model Prototype do
+    # Found associations:
+      # configure :hops, :has_and_belongs_to_many_association 
+      # configure :grains, :has_and_belongs_to_many_association 
+      # configure :yeasts, :has_and_belongs_to_many_association 
+      # configure :beer_style, :belongs_to_association   #   # Found columns:
+      # configure :_type, :text         # Hidden 
+      # configure :_id, :bson_object_id 
+      # configure :id, :text 
+      # configure :hop_ids, :serialized         # Hidden 
+      # configure :grain_ids, :serialized         # Hidden 
+      # configure :yeast_ids, :serialized         # Hidden 
+      # configure :beer_style_id, :bson_object_id         # Hidden   #   # Sections:
+    list do; end
+    export do; end
+    show do; end
+    edit do
+      field :beer_category do
+        read_only true
+      end
+      field :beer_style
+      field :ingredient_grains
+      field :ingredient_hops
+      field :ingredient_yeasts
+    end
+    create do; end
+    update do; end
+  end
   # config.model Yeast do
   #   # Found associations:
   #     configure :prototypes, :has_and_belongs_to_many_association   #   # Found columns:

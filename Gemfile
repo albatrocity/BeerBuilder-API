@@ -35,6 +35,7 @@ group :test, :development do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
   gem 'minitest-rails'
+  gem 'minitest-spec-rails'
   gem 'capybara_minitest_spec'
   gem "mongoid-minitest"
   gem 'fabrication'
